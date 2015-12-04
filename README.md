@@ -11,10 +11,11 @@
 * Clone this repo to your rpi
 * `sudo ./bootstrap.sh`
 
-#### Tools
+#### Debugging and Testing Tools
 * `sudo ppstest /dev/pps0`
 * `sudo minicom /dev/ttyAMA0`
-* `cgps -s # when ntpd isn't using the serial iface`
+* `cgps -s`
+* `gpspipe -w`
 * `/opt/ntp/ntp-4.2.8p4/bin/ntpq -p`
 
 #### Resources

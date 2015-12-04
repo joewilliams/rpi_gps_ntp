@@ -59,7 +59,9 @@ cp -a service /opt/ntp/
 ln -s /opt/ntp/service /etc/service/ntpd
 
 echo 'DEVICES="/dev/ttyAMA0"' >> /etc/default/gpsd
-echo 'START_DAEMON="true"' >> /etc/default/gpsd
+# gpsd is useful for making sure the gps is getting a lock and data
+# but will also hog the NMEA serial so ntp can't use it
+#echo 'START_DAEMON="true"' >> /etc/default/gpsd
 
 echo ''
 echo 'done! please reboot'
