@@ -1,0 +1,7 @@
+pps-tools
+libcap-dev
+libssl-dev
+minicom
+gpsd
+gpsd-clients
+runit

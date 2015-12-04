@@ -1,0 +1,11 @@
+#!/bin/sh
+
+NTP_VER='4.2.8p4'
+
+exec 2>&1
+exec /opt/ntp/ntp-${NTP_VER}/sbin/ntpd \
+  -p /var/run/ntpd.pid \
+  -g \
+  -n \
+  -c /opt/ntp/etc/ntp.conf \
+  -u 65534:65534
